@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  app:
+    image: delivery_fee_calculator:latest
+    build: .
+    ports:
+      - 8080:8080
