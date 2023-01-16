@@ -39,7 +39,7 @@ def calculate_delivery_fee(data):
         surcharge_cart_value = 0
         if cart_value < 1000:
             surcharge_cart_value = 1000 - cart_value
-        delivery_fee = delivery_fee + surcharge_cart_value
+        delivery_fee += surcharge_cart_value
     
         charge_distance = 0
         # distance
@@ -47,7 +47,7 @@ def calculate_delivery_fee(data):
             charge_distance = 200
         else:
             charge_distance = 200 + math.ceil((delivery_distance - 1000) / 500) * 100
-        delivery_fee = delivery_fee + charge_distance
+        delivery_fee += charge_distance
 
         # items
         charge_items = 0
@@ -55,7 +55,7 @@ def calculate_delivery_fee(data):
             charge_items = (number_of_items - 4) * 50
         elif number_of_items > 12:
             charge_items = 50 * (13 - 4) + 120 
-        delivery_fee = delivery_fee + charge_items
+        delivery_fee += charge_items
 
         if time.isoweekday() == 5 and time.hour >= 15 and time.hour <= 19:
             delivery_fee = delivery_fee*1.2

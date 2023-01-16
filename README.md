@@ -38,3 +38,7 @@ If the delivery fee calculator is a part of a larger system as a miroservice, I 
 1. Use a message queue to decouple the delivery fee calculator from the rest of the system. Because this service maybe down for a while of be called by a large number of users simultaneously. If we use message queue, the delivery fee calculator can be scaled independently from the rest of the system. 
 
 2. Deploy a load balancer to distribute the load to multiple instances of the delivery fee calculator if there are numerous calls to the service.
+
+3. Implement observability to monitor the health of the service and the performance of the service.
+
+4. Log the requests and responses to the service into files to help with debugging.
