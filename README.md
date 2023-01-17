@@ -9,7 +9,7 @@ pip3 install -r requirements.txt
 flask --app main run
 
 # unit test
-pytest
+python3 -m pytest tests
 
 # curl test
 curl --location --request POST 'http://127.0.0.1:8080' \
