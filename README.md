@@ -6,7 +6,7 @@ There are two ways to run this project:
 ```bash
 cd app
 pip3 install -r requirements.txt
-flask --app main run
+python3 main.py
 
 # unit test
 python3 -m pytest tests
