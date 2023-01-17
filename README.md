@@ -42,3 +42,5 @@ If the delivery fee calculator is a part of a larger system as a miroservice, I 
 3. Implement observability to monitor the health of the service and the performance of the service.
 
 4. Log the requests and responses to the service into files to help with debugging.
+
+5. Set up CI/CD to automate the deployment of the service.
